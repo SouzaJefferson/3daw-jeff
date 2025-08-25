@@ -1,0 +1,3 @@
+ingles;eng;10
+português;pt;80
+matématica;MAT;500
