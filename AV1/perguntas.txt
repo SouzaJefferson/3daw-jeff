@@ -1,0 +1,2 @@
+1;multipla;Qual a melhor forma de motivar a equipe?;A)Dar feedbacks|B)Aumentar salário|C)Criar treinamentos|D)discutir quem está certo|E)deixar que eles cheguem num acordo.|;0
+2;texto;Descreva como você resolveria um conflito na equipe;;
