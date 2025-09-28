@@ -32,19 +32,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <meta charset="UTF-8">
 <title>Cadastrar Pergunta de Texto</title>
 <style>
-body { font-family: sans-serif; margin:20px; }
-label { display:block; margin-top:10px; }
-textarea { width:100%; padding:8px; margin-top:5px; }
-button { margin-top:15px; padding:10px 15px; background:#28a745; color:white; border:none; border-radius:5px; cursor:pointer; }
-button:hover { background:#218838; }
-.voltar { display:inline-block; margin-top:20px; text-decoration:none; color:#007bff; }
-.erro { color:red; margin-top:10px; }
-.msg { color:green; margin-top:10px; }
+body {
+     font-family: sans-serif; 
+     margin:20px;
+     }
+
+label { 
+    display:block; 
+    margin-top:10px; 
+}
+textarea { 
+    width:100%; 
+    padding:8px; 
+    margin-top:5px; 
+}
+button { 
+    margin-top:15px; 
+    padding:10px 15px; 
+    background:#28a745; 
+    color:white; 
+    border:none; 
+    border-radius:5px; 
+    cursor:pointer; 
+}
+button:hover { 
+    background:#218838; 
+}
+.voltar { 
+    display:inline-block; 
+    margin-top:20px; 
+    text-decoration:none; 
+    color:#007bff; 
+}
+.erro { 
+    color:red; 
+    margin-top:10px; 
+}
+.msg { 
+    color:green; 
+    margin-top:10px; 
+}
 </style>
 </head>
 <body>
 <h1>Cadastrar Pergunta de Texto</h1>
-<a href="index.php" class="voltar">← Voltar</a>
+<a href="./index.php" class="voltar">Voltar</a>
 
 <?php if($erro) echo "<div class='erro'>$erro</div>"; ?>
 <?php if($sucesso) echo "<div class='msg'>$sucesso</div>"; ?>

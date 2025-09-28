@@ -22,7 +22,8 @@ if ($id && file_exists($arquivo)) {
     }
 }
 
-// Se enviou o formulário
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $idEdicao = $_POST['id'];
     $tipo = $_POST['tipo'];
@@ -37,10 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $correta = "";
     }
 
-    // Monta a nova linha
     $novaLinha = "$idEdicao;$tipo;$pergunta;$opcoes;$correta";
 
-    // Reescreve o arquivo
+
     foreach ($linhas as $i => $linha) {
         list($idPergunta) = explode(";", $linha);
         if ($idPergunta == $idEdicao) {
@@ -60,13 +60,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <meta charset="UTF-8">
 <title>Editar Pergunta</title>
 <style>
-body { font-family: sans-serif; margin:20px; }
-label { display:block; margin-top:10px; font-weight:bold; }
-textarea, input[type=text] { width:100%; padding:8px; margin-top:5px; }
-.opcao-container { margin-top:10px; display:flex; align-items:center; gap:10px; }
-button { margin-top:20px; padding:10px 15px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; }
-button:hover { background:#0056b3; }
-.voltar { display:inline-block; margin-top:20px; text-decoration:none; color:#007bff; }
+body { 
+    font-family: sans-serif; 
+    margin:20px;
+ }
+
+label { 
+    display:block; 
+    margin-top:10px; 
+    font-weight:bold; 
+}
+textarea, input[type=text] { 
+    width:100%; 
+    padding:8px; 
+    margin-top:5px; 
+}
+.opcao-container { 
+    margin-top:10px; 
+    display:flex; 
+    align-items:center; 
+    gap:10px; 
+}
+button { 
+    margin-top:20px; 
+    padding:10px 15px; 
+    background:#007bff; 
+    color:white; 
+    border:none; 
+    border-radius:5px; 
+    cursor:pointer; 
+}
+button:hover { 
+    background:#0056b3; 
+}
+.voltar { 
+    display:inline-block; 
+    margin-top:20px; 
+    text-decoration:none; 
+    color:#007bff; 
+}
 </style>
 </head>
 <body>
@@ -93,7 +125,8 @@ button:hover { background:#0056b3; }
                 </div>
             <?php endforeach; ?>
 
-            <!-- Campo para adicionar mais opções -->
+     
+            
             <?php for ($j = count($opcoes); $j < 5; $j++): ?>
                 <div class="opcao-container">
                     <input type="radio" name="correta" value="<?= $j ?>">
