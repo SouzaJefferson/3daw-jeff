@@ -55,7 +55,7 @@ form.filtros {
 }
 
 header {
-    background-color: #171717ff;
+    background-color: #200573ff;
     padding: 15px;
 }
     nav {
@@ -95,10 +95,10 @@ nav a.active {
 
    <section>
         <h1>Gerenciar Perguntas</h1>
-        <a href="novaMultipla.php" class="btn-novo">Cadastrar Nova Multipla</a>
-        <a href="novaTexto.php" class="btn-novo">Cadastrar Nova Texto</a>
+        <a href="criarMulti.php" class="btn-novo">Cadastrar Nova Multipla</a>
+        <a href="criarTexto.php" class="btn-novo">Cadastrar Nova Texto</a>
 
-        <!-- Formulário de busca/filtro -->
+        
         <form method="get" class="filtros">
             <label>Buscar por ID:
                 <input type="number" name="id" value="<?= htmlspecialchars($buscaId) ?>" placeholder="Ex: 2">
